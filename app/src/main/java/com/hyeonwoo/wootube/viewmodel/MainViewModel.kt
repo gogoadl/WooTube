@@ -1,4 +1,8 @@
 package com.hyeonwoo.wootube.viewmodel
 
-class MainViewModel {
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class MainViewModel @Inject constructor(private val mainRepository ){
 }

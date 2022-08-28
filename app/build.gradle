@@ -55,4 +55,7 @@ dependencies {
 
     // exoPlayer
     implementation "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
+
+    // rxKotlin
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
 }
