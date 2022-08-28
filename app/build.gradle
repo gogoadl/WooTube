@@ -52,4 +52,7 @@ dependencies {
     // hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    // exoPlayer
+    implementation "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
 }
