@@ -7,9 +7,9 @@ import retrofit2.http.Query
 
 interface WooTubeService {
     @GET("videos")
-    suspend fun fetchVideoList(
+    fun fetchVideoList(
         @Query("part") part : String = "id",
         @Query("chart") chart : String = "mostPopular"
-    ) : Single<okhttp3.Response>
+    ) : Single<String>
 
 }
