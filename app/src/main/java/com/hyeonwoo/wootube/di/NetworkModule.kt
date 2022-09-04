@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -25,8 +26,8 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): WooTubeService {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl(
-                "https://www.googleapis.com/youtube/v3/")
+            .baseUrl("https://www.googleapis.com/youtube/v3/")
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(WooTubeService::class.java)
     }
