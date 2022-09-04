@@ -7,7 +7,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Module
@@ -23,16 +22,12 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient): WooTubeService {
         return Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(
                 "https://www.googleapis.com/youtube/v3/")
             .build()
-    }
-    @Provides
-    @Singleton
-    fun provideWooTubeService(retrofit: Retrofit): WooTubeService {
-        return retrofit.create(WooTubeService::class.java)
+            .create(WooTubeService::class.java)
     }
 }
