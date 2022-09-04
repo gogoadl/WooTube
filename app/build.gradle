@@ -50,6 +50,7 @@ dependencies {
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
     // hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
@@ -59,8 +60,9 @@ dependencies {
     implementation "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
 
     // rxKotlin
+    implementation "io.reactivex.rxjava3:rxjava:$rxKotlinVersion"
     implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
-
+    implementation "io.reactivex.rxjava3:rxandroid:$rxKotlinVersion"
     // by viewmodels
     implementation 'androidx.activity:activity-ktx:1.5.1'
     implementation 'androidx.fragment:fragment-ktx:1.5.2'

@@ -9,7 +9,7 @@ ext {
     retrofitVersion = "2.9.0"
     hiltVersion = "2.41"
     exoPlayerVersion = "2.18.0"
-    rxKotlinVersion = "3.0.1"
+    rxKotlinVersion = "3.0.0"
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
