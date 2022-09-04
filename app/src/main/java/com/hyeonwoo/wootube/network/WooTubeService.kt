@@ -1,6 +1,8 @@
 package com.hyeonwoo.wootube.network
 
+import com.hyeonwoo.wootube.model.Video
 import io.reactivex.rxjava3.core.Single
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
@@ -12,6 +14,6 @@ interface WooTubeService {
         @Query("part") part : String = "id",
         @Query("chart") chart : String = "mostPopular",
         @Query("key") key : String = "AIzaSyBWmH6sgU_IRvIcV-SqcQpXA6m3KCoYfd4"
-    ) : Call<String>
+    ) : Call<Video>
 
 }
