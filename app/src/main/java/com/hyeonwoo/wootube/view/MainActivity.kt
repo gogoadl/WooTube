@@ -17,29 +17,19 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     val viewModel : MainViewModel by viewModels()
-//    @Inject lateinit var wooTubeService : WooTubeService
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewModel.videoList()
+
 
         val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtubePlayer)
-        youTubePlayerView.play("yB1lWmEE0w0", object : YouTubePlayerView.OnInitializedListener {
-            override fun onInitializationFailure(
-                provider: YouTubePlayer.Provider,
-                result: YouTubeInitializationResult
-            ) {
+        viewModel.videoList().subscribe(
+            {
+                youTubePlayerView.play(it.items.get(0).id,  null)
+            },
+            {
 
             }
-
-            override fun onInitializationSuccess(
-                provider: YouTubePlayer.Provider,
-                player: YouTubePlayer,
-                wasRestored: Boolean
-            ) {
-
-            }
-
-        })
+        )
     }
 }
