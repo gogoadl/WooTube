@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtubePlayer)
+//        val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtubePlayer)
         viewModel.videoList().subscribe(
             {
-                youTubePlayerView.play(it.items.get(0).id,  null)
+//                youTubePlayerView.play(it.items.get(0).id,  null)
             },
             {
 

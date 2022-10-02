@@ -39,14 +39,23 @@
         </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <kr.co.prnd.YouTubePlayerView
-        android:id="@+id/youtubePlayer"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_recycler_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-    </kr.co.prnd.YouTubePlayerView>
+    </androidx.recyclerview.widget.RecyclerView>
+<!--    <kr.co.prnd.YouTubePlayerView-->
+<!--        android:id="@+id/youtubePlayer"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">-->
+<!--    </kr.co.prnd.YouTubePlayerView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
