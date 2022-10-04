@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
@@ -21,15 +22,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-//        val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtubePlayer)
-        viewModel.videoList().subscribe(
-            {
-//                youTubePlayerView.play(it.items.get(0).id,  null)
-            },
-            {
-
-            }
-        )
+        val recyclerView: RecyclerView = findViewById(R.id.video_recycler_view)
+        viewModel.getVideoList()
+        viewModel.videoList.observe(this) {
+            val mainRecyclerViewAdapter =
+                viewModel.videoList.value?.let { MainRecyclerViewAdapter(it) }
+            recyclerView.adapter = mainRecyclerViewAdapter
+        }
     }
 }
