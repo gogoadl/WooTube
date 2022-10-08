@@ -31,7 +31,7 @@ class MainRecyclerViewAdapter(val videoList: List<Item>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         Log.d("onBindViewHolder", "onBindViewHolder 1")
-        holder.youTubePlayerView.play(videoList.get(position).id, null)
+//        holder.youTubePlayerView.play(videoList.get(position).id, null)
         Log.d("onBindViewHolder", "onBindViewHolder 2")
     }
 
