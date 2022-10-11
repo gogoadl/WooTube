@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface WooTubeService {
     @GET("videos")
     fun fetchVideoList(
-        @Query("part") part : String = "id",
+        @Query("part") part : String = "snippet",
         @Query("chart") chart : String = "mostPopular",
         @Query("key") key : String = BuildConfig.YOUTUBE_API_KEY
     ) : Single<Video>

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getVideoList()
         viewModel.videoList.observe(this) {
             val mainRecyclerViewAdapter =
-                viewModel.videoList.value?.let { MainRecyclerViewAdapter(it) }
+                viewModel.videoList.value?.let { MainRecyclerViewAdapter(this, it) }
             recyclerView.adapter = mainRecyclerViewAdapter
         }
     }
