@@ -10,6 +10,7 @@ ext {
     hiltVersion = "2.41"
     exoPlayerVersion = "2.18.0"
     rxKotlinVersion = "3.0.0"
+    glideVersion = '4.14.2'
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
