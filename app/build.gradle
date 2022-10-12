@@ -78,4 +78,7 @@ dependencies {
     // glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // transformationLayout
+    implementation "com.github.skydoves:transformationlayout:$transformationLayoutVersion"
 }
