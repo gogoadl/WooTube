@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WooTube</string>
+    <string name="base_video_title">video title</string>
+    <string name="base_video_desc">video description</string>
+    <string name="base_video_channel_title">channel title</string>
+    <string name="base_video_channel_desc">channel desc</string>
 </resources>
