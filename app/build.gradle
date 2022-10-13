@@ -81,4 +81,7 @@ dependencies {
 
     // transformationLayout
     implementation "com.github.skydoves:transformationlayout:$transformationLayoutVersion"
+
+    // logger
+    implementation "com.jakewharton.timber:timber:$timberVersion"
 }

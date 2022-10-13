@@ -12,6 +12,7 @@ ext {
     rxKotlinVersion = "3.0.0"
     glideVersion = '4.14.2'
     transformationLayoutVersion = "1.1.1"
+    timberVersion = "5.0.1"
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
