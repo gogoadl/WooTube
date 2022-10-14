@@ -1,8 +1,10 @@
 package com.hyeonwoo.wootube.model
 
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Snippet(
     val categoryId: String,
     val channelId: String,
@@ -16,4 +18,4 @@ data class Snippet(
     val tags: List<String>,
     val thumbnails: Thumbnails,
     val title: String
-)
+): Parcelable

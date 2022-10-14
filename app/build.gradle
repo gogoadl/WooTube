@@ -3,11 +3,15 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
+androidExtensions {
+    experimental = true
+}
 android {
     compileSdk 32
 

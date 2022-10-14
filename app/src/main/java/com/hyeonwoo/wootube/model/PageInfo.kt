@@ -1,9 +1,11 @@
 package com.hyeonwoo.wootube.model
 
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class PageInfo(
     val resultsPerPage: Int,
     val totalResults: Int
-)
+): Parcelable
