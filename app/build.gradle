@@ -88,4 +88,7 @@ dependencies {
 
     // logger
     implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // bundler
+    implementation "com.github.skydoves:bundler:$bundlerVersion"
 }
