@@ -1,5 +1,6 @@
 package com.hyeonwoo.wootube.view
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -44,12 +45,12 @@ class MainRecyclerViewAdapter(private val context: Context, private val videoLis
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         Log.d("onBindViewHolder", "onBindViewHolder 1")
-        Glide.with(context).load(videoList.get(position).snippet.thumbnails.maxres.url).into(holder.videoImage)
+
+        Glide.with(context).load(videoList.get(position).snippet.thumbnails.high.url).into(holder.videoImage)
         holder.videoTitle.text = videoList.get(position).snippet.title
         holder.videoChannelTitle.text = videoList.get(position).snippet.channelTitle
         holder.transformationLayout.setOnClickListener {
-            val intent = Intent(context, DetailActivity::class.java)
-            startActivity(holder.transformationLayout, intent)
+            DetailActivity.startActivity(holder.transformationLayout, videoList.get(position))
         }
 //        holder.youTubePlayerView.play(videoList.get(position).id, null)
         Log.d("onBindViewHolder", "onBindViewHolder 2")
